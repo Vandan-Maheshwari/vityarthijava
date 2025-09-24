@@ -3,10 +3,6 @@ package edu.ccrm.domain;
 import java.time.LocalDate;
 import java.util.Objects;
 
-/**
- * Course class demonstrating Builder design pattern
- * Uses nested static Builder class
- */
 public class Course {
     private final String code;
     private final String title;
@@ -146,7 +142,7 @@ public class Course {
     
     public void setCurrentEnrollment(int currentEnrollment) {
         if (currentEnrollment < 0) {
-            throw new IllegalArgumentException("Current enrollment cannot be negative");
+            throw new IllegalArgumentException("Currnt enrollment cannot be negative");
         }
         this.currentEnrollment = currentEnrollment;
         updateLastModified();
