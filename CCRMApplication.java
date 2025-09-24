@@ -2,23 +2,8 @@ package edu.ccrm;
 
 import edu.ccrm.cli.CCRMCommandLine;
 import edu.ccrm.config.AppConfig;
-
-/**
- * Main application class for Campus Course & Records Manager (CCRM)
- * Entry point demonstrating proper Java application structure
- * 
- * @author CCRM Development Team
- * @version 1.0
- * @since Java SE 11+
- */
 public class CCRMApplication {
-    
-    /**
-     * Main method - application entry point
-     * Demonstrates proper exception handling and resource management
-     * 
-     * @param args command line arguments (not used in this application)
-     */
+
     public static void main(String[] args) {
         try {
             // Print application header
@@ -36,7 +21,7 @@ public class CCRMApplication {
             cli.run();
             
         } catch (Exception e) {
-            System.err.println("Fatal error occurred during application startup:");
+            System.err.println("Fatal error during startup:");
             System.err.println("Error: " + e.getMessage());
             e.printStackTrace();
             System.exit(1);
@@ -50,7 +35,7 @@ public class CCRMApplication {
      */
     private static void printApplicationHeader() {
         System.out.println("\n" + "=".repeat(80));
-        System.out.println("    CAMPUS COURSE & RECORDS MANAGER (CCRM)");
+        System.out.println("    Campus course & Records Manager (CCRM)");
         System.out.println("         Comprehensive Java SE Application");
         System.out.println("=".repeat(80));
         System.out.println("Version: 1.0");
